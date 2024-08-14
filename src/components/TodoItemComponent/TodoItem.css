@@ -1,0 +1,27 @@
+.TodoItemLiPrp{
+    /* list-style-type: none;
+  
+    padding-bottom: 5px;
+    padding-top: 5px;
+    position: relative;
+    margin-top: 10px;
+    
+    align-items: center;
+    justify-content: center; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc; /* Satır havası vermek için kenarlık ekle */
+    border-radius: 4px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(0,212,255,1) 100%);
+    color: white;
+}
+.TodoItemLiPrpBtn{
+    /* float: right;
+    padding-bottom: 5px;
+    padding-top: 5px; */
+    margin-left: auto; 
+}
