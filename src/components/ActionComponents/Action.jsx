@@ -7,8 +7,8 @@ class  Action extends React.Component {
         super(props);
         this.CustomerAdd = this.CustomerAdd.bind(this)
         this.handleDeleteAll = this.handleDeleteAll.bind(this);
-        this.clearInput = this.clearInput.bind(this);
-       
+        this.clearInput = this.clearInput.bind(this)
+    
       
        
        
@@ -17,19 +17,20 @@ class  Action extends React.Component {
         e.preventDefault();
         const customer =  e.target.elements.TxtItem.value.trim();
         console.log(customer)
+        this.props.CustomerAdd(customer);
+      
         
     }
     handleDeleteAll() {
         this.props.clearAllCustomers();
       }
+     
       clearInput(){
-        const InputDeger = document.getElementById("txtdeneme");
-        
-        if(InputDeger){
-            InputDeger.value = ""
+        const input =document.getElementById("txtdeneme").value;
+        console.log(input, "asdsadasdasd2")
+        if(input){
+           return {input : ""}
         }
-       
-        
       }
    
    
@@ -44,7 +45,7 @@ class  Action extends React.Component {
                         <input id="txtdeneme" type="text"  name="TxtItem" placeholder="Add a new Customer" className="form-control"></input>
                         <div className="btnsForm">
                         <button type="submit" className="input-group-text BtnInputAdd ms-2"><i class="fa-solid fa-plus"></i></button>
-                        <button  onClick={this.clearInput} className="input-group-text BtnInputDelete ms-2"><i class="fa-solid fa-delete-left"></i></button>
+                       
                         </div>
                        
                     </div>

@@ -4,3 +4,15 @@
   padding: 10px;
   border-radius: 10px;
 }
+/* Başlangıçta görünmeyen durum için */
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease; /* 0.5 saniyelik geçiş süresi */
+  pointer-events: none; /* Kullanıcı etkileşimlerini devre dışı bırakır */
+}
+
+/* Görünür durum için */
+.visible {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
